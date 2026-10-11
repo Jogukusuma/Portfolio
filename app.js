@@ -801,29 +801,32 @@ function initNssLightbox() {
 function initResumePreview() {
   const resumeCard = document.getElementById('resume-preview-card');
   const fullscreenBtn = document.getElementById('btn-resume-fullscreen');
-  if (!resumeCard || !fullscreenBtn) return;
 
-  fullscreenBtn.addEventListener('click', () => {
-    resumeCard.classList.toggle('is-fullscreen');
-    const isFull = resumeCard.classList.contains('is-fullscreen');
-    document.body.style.overflow = isFull ? 'hidden' : '';
-    const textSpan = fullscreenBtn.querySelector('span');
-    if (textSpan) {
-      textSpan.textContent = isFull ? 'Exit' : 'Fullscreen';
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && resumeCard.classList.contains('is-fullscreen')) {
-      resumeCard.classList.remove('is-fullscreen');
-      document.body.style.overflow = '';
+  // Fullscreen Preview Toggle
+  if (resumeCard && fullscreenBtn) {
+    fullscreenBtn.addEventListener('click', () => {
+      resumeCard.classList.toggle('is-fullscreen');
+      const isFull = resumeCard.classList.contains('is-fullscreen');
+      document.body.style.overflow = isFull ? 'hidden' : '';
       const textSpan = fullscreenBtn.querySelector('span');
       if (textSpan) {
-        textSpan.textContent = 'Fullscreen';
+        textSpan.textContent = isFull ? 'Exit' : 'Fullscreen';
       }
-    }
-  });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && resumeCard.classList.contains('is-fullscreen')) {
+        resumeCard.classList.remove('is-fullscreen');
+        document.body.style.overflow = '';
+        const textSpan = fullscreenBtn.querySelector('span');
+        if (textSpan) {
+          textSpan.textContent = 'Fullscreen';
+        }
+      }
+    });
+  }
 }
+
 
 
 

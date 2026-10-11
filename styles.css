@@ -2592,6 +2592,99 @@ section {
   }
 }
 
+/* ==========================================
+   ACADEMIC EDUCATION SECTION
+   ========================================== */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  width: 100%;
+}
 
+.education-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s var(--transition-cubic), box-shadow 0.4s var(--transition-cubic), border-color 0.4s var(--transition-cubic);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
 
+@media (hover: hover) {
+  .education-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(var(--accent-rgb), 0.5);
+    box-shadow: 0 20px 40px var(--shadow-color), 0 0 25px rgba(var(--accent-rgb), 0.12);
+  }
+}
 
+.education-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+
+.education-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.education-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+}
+
+.education-badge.highlight {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.education-year {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.education-degree {
+  font-family: var(--font-headings);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+}
+
+.education-institution {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+
+.education-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
