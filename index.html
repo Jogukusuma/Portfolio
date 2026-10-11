@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO & Brand Metadata -->
+  <title>Jogu Kusuma Manjari | Software Engineer & AI/ML Developer</title>
+  <meta name="description"
+    content="Professional portfolio of Jogu Kusuma Manjari. Software Engineer and AI/ML Developer specializing in Java development, data structures, and intelligent applications.">
+  <meta name="keywords"
+    content="Jogu Kusuma Manjari, Software Engineer, Java Developer, AI/ML, Portfolio, CMRIT, CSE, Algorithms, Java">
+  <meta name="author" content="Jogu Kusuma Manjari">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jogu Kusuma Manjari | Software Engineer & AI/ML Developer">
+  <meta property="og:description"
+    content="Java Developer & AI/ML Engineer. Discover featured projects, skills, and competitive hackathon achievements.">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Minimal Loader Overlay -->
+  <div id="loader-wrapper" aria-hidden="true">
+    <div class="loader-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="loader-star">
+        <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"></polygon>
+      </svg>
+      JKM
+    </div>
+    <div class="loader-bar-outer">
+      <div class="loader-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- Background Drift Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Floating Glass Navigation Bar -->
+  <div class="nav-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="logo-star-svg">
+          <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"></polygon>
+        </svg>
+        JKM
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#nss">NSS</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="nav-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">☀️</span>
+        </button>
+
+        <!-- GitHub -->
+        <a href="https://github.com/Jogukusuma" target="_blank" rel="noopener noreferrer" class="nav-btn"
+          aria-label="GitHub Profile" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+            </path>
+            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/jogu-kusuma-manjari-46995830b/" target="_blank" rel="noopener noreferrer"
+          class="nav-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:jogukusuma08@gmail.com" class="nav-btn email-link" aria-label="Email Me" title="Email Me">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Portfolio Hero Section -->
+  <header id="home" class="hero-section">
+    <div class="hero-content reveal-left">
+      <span class="hero-greeting">Hi, I'm Jogu Kusuma Manjari</span>
+      <h1 class="hero-headline"></h1>
+      <p class="hero-sub-headline">Building Intelligent Applications</p>
+
+      <p class="hero-meta">Java Developer | AI/ML Engineer</p>
+
+      <p class="hero-desc">
+        Final-year Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. I
+        build scalable software solutions, machine learning applications, and technology-driven products.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">
+          View Projects
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#resume" class="btn btn-secondary">
+          View Resume
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-socials-inline">
+        <a href="https://github.com/Jogukusuma" target="_blank" rel="noopener noreferrer" class="hero-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+            </path>
+            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+          </svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/jogu-kusuma-manjari-46995830b/" target="_blank" rel="noopener noreferrer"
+          class="hero-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="mailto:jogukusuma08@gmail.com" class="hero-social-link email-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Right Side: Circular portrait and particles canvas -->
+    <div class="hero-visual reveal-right">
+      <canvas id="hero-canvas"></canvas>
+      <div class="profile-circle-frame">
+        <img src="profile.png" alt="Jogu Kusuma Manjari Portrait" class="profile-circle-img">
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-label">01 // Profile Summary</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-story reveal-left">
+        <p>
+          Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning with strong
+          interest in software development, problem solving, and building intelligent systems.
+        </p>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="about-stats-grid reveal-right">
+        <div class="stat-glass-card">
+          <div class="stat-num">8.25</div>
+          <div class="stat-title">CGPA</div>
+          <div class="stat-subtitle">CMRIT Hyderabad</div>
+        </div>
+        <div class="stat-glass-card">
+          <div class="stat-num">Java</div>
+          <div class="stat-title">Primary Language</div>
+          <div class="stat-subtitle">Core Architecture</div>
+        </div>
+        <div class="stat-glass-card">
+          <div class="stat-num">4+</div>
+          <div class="stat-title">Selected Projects</div>
+          <div class="stat-subtitle">Developer Stack</div>
+        </div>
+        <div class="stat-glass-card">
+          <div class="stat-num">2nd</div>
+          <div class="stat-title">Hackathon Rank</div>
+          <div class="stat-subtitle">SummerSaaS AI 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-label">02 // Core Capabilities</span>
+      <h2 class="section-title">Skills & Technologies</h2>
+    </div>
+
+    <div class="skills-grid reveal">
+      <!-- Programming -->
+      <div class="skill-category-card">
+        <h3 class="skill-card-title">Programming</h3>
+        <ul class="skill-list">
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name skill-primary">Java
+              (Primary)</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Python</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">C</span></li>
+        </ul>
+      </div>
+
+      <!-- AI / ML -->
+      <div class="skill-category-card">
+        <h3 class="skill-card-title">AI / Machine Learning</h3>
+        <ul class="skill-list">
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Machine Learning</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Scikit-learn</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Pandas</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Matplotlib</span></li>
+        </ul>
+      </div>
+
+      <!-- Web -->
+      <div class="skill-category-card">
+        <h3 class="skill-card-title">Web</h3>
+        <ul class="skill-list">
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">HTML</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">CSS</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">JavaScript</span></li>
+        </ul>
+      </div>
+
+      <!-- Database -->
+      <div class="skill-category-card">
+        <h3 class="skill-card-title">Database</h3>
+        <ul class="skill-list">
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">SQL</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">MongoDB</span></li>
+        </ul>
+      </div>
+
+      <!-- Core CS -->
+      <div class="skill-category-card">
+        <h3 class="skill-card-title">Core CS</h3>
+        <ul class="skill-list">
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Data Structures</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Algorithms</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">OOP</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">DBMS</span></li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Operating Systems</span>
+          </li>
+          <li class="skill-item"><span class="skill-bullet"></span><span class="skill-name">Computer Networks</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-label">03 // Engineering Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+    </div>
+
+    <div class="projects-layout-grid">
+      <!-- Project 1: Code Pulse -->
+      <div class="project-showcase-card reveal">
+        <div class="project-visual-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </div>
+        <div class="project-showcase-body">
+          <h3 class="project-showcase-title">Code Pulse</h3>
+          <p class="project-showcase-desc">
+            Developed a coding assessment platform that evaluates programming performance through automated analysis,
+            scoring workflows, and developer insights.
+          </p>
+          <ul class="project-features-list">
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Automated evaluation</span>
+            </li>
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Performance analytics</span>
+            </li>
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Coding assessment workflow</span>
+            </li>
+          </ul>
+          <div class="project-showcase-tech">
+            <span class="project-tech-badge">Python</span>
+            <span class="project-tech-badge">Analytics</span>
+          </div>
+          <a href="https://github.com/Jogukusuma" target="_blank" rel="noopener noreferrer"
+            class="project-showcase-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2: Spam Detection System -->
+      <div class="project-showcase-card reveal" style="transition-delay: 0.1s;">
+        <div class="project-visual-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <div class="project-showcase-body">
+          <h3 class="project-showcase-title">Spam Detection System</h3>
+          <p class="project-showcase-desc">
+            Created a machine learning text classification system to identify spam messages using NLP preprocessing and
+            classification algorithms.
+          </p>
+          <ul class="project-features-list">
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Text processing</span>
+            </li>
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Feature extraction</span>
+            </li>
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Classification model</span>
+            </li>
+          </ul>
+          <div class="project-showcase-tech">
+            <span class="project-tech-badge">Python</span>
+            <span class="project-tech-badge">Scikit-learn</span>
+            <span class="project-tech-badge">NLP</span>
+          </div>
+          <a href="https://github.com/Jogukusuma" target="_blank" rel="noopener noreferrer"
+            class="project-showcase-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3: NourishNet -->
+      <div class="project-showcase-card reveal" style="transition-delay: 0.2s;">
+        <div class="project-visual-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="project-showcase-body">
+          <h3 class="project-showcase-title">NourishNet</h3>
+          <p class="project-showcase-desc">
+            Built a food redistribution coordination platform connecting donors and receivers to reduce food waste
+            through structured workflows and database management.
+          </p>
+          <ul class="project-features-list">
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Donor management</span>
+            </li>
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Receiver coordination</span>
+            </li>
+            <li class="project-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Database workflows</span>
+            </li>
+          </ul>
+          <div class="project-showcase-tech">
+            <span class="project-tech-badge">HTML</span>
+            <span class="project-tech-badge">CSS</span>
+            <span class="project-tech-badge">SQL</span>
+          </div>
+          <a href="https://github.com/Jogukusuma" target="_blank" rel="noopener noreferrer"
+            class="project-showcase-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements & Hackathons Section -->
+  <section id="achievements">
+    <div class="section-header reveal">
+      <span class="section-label">04 // Competitive Wins & Hackathons</span>
+      <h2 class="section-title">Achievements & Hackathons</h2>
+    </div>
+
+    <!-- Prominent Hackathon 2nd Place Hero Card -->
+    <div class="hackathon-featured-card reveal">
+      <div class="hackathon-featured-badge-row">
+        <span class="winner-trophy-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+            <path d="M4 22h16"></path>
+            <path d="M10 14.66V17c0 .55-.45 1-1 1H7.5"></path>
+            <path d="M14 14.66V17c0 .55.45 1 1 1h1.5"></path>
+            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+          </svg>
+          🥈 2nd Place Winner (Second Winner)
+        </span>
+        <span class="hackathon-loc-badge">BITS Pilani Hyderabad Campus</span>
+      </div>
+
+      <div class="hackathon-featured-body">
+        <div class="hackathon-featured-info">
+          <h3 class="hackathon-featured-title">SummerSaaS AI Hackathon 2026</h3>
+          <p class="hackathon-featured-tagline">India's Largest National AI Builder Hackathon • Team Agent Stack</p>
+          <p class="hackathon-featured-desc">
+            Placed 2nd overall among 3,000+ national participants at BITS Pilani Hyderabad Campus. Built and demonstrated a complete end-to-end AI-driven prototype in an intensive 36-hour offline sprint.
+          </p>
+
+          <div class="hackathon-stats-strip">
+            <div class="hackathon-stat-pill">
+              <span class="stat-pill-val">Top 2%</span>
+              <span class="stat-pill-lbl">Selection Rate</span>
+            </div>
+            <div class="hackathon-stat-pill">
+              <span class="stat-pill-val">238 Pts</span>
+              <span class="stat-pill-lbl">Module 1 Score</span>
+            </div>
+            <div class="hackathon-stat-pill">
+              <span class="stat-pill-val">Top 50</span>
+              <span class="stat-pill-lbl">Finalist Teams</span>
+            </div>
+            <div class="hackathon-stat-pill">
+              <span class="stat-pill-val">36 Hrs</span>
+              <span class="stat-pill-lbl">Offline Hackathon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hackathon-featured-action">
+          <a href="CERTIFICATES/Hackathons/Winners___Finalists_Certificates_Jogu_Kusuma_Manjari.png" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            View Winner Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Hackathons & Competitions Grid -->
+    <div class="hackathons-subgrid">
+      <!-- GDG TechSprint -->
+      <div class="hackathon-sub-card reveal" style="transition-delay: 0.05s;">
+        <div class="hackathon-sub-header">
+          <div class="hackathon-sub-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <span class="hackathon-status-tag">Participation</span>
+        </div>
+        <h4 class="hackathon-sub-title">TechSprint</h4>
+        <p class="hackathon-sub-meta">GDG On Campus • CMRIT Hyderabad</p>
+        <p class="hackathon-sub-desc">Rapid product sprint leveraging Google APIs, cloud infrastructure, and modern developer technologies.</p>
+        <a href="CERTIFICATES/Hackathons/Participant_Cert_ Jogu Kusuma Manjari.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-full">
+          View PDF
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Hyderabad Hackathon -->
+      <div class="hackathon-sub-card reveal" style="transition-delay: 0.1s;">
+        <div class="hackathon-sub-header">
+          <div class="hackathon-sub-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"></polygon>
+            </svg>
+          </div>
+          <span class="hackathon-status-tag">Top 1000 / 3000</span>
+        </div>
+        <h4 class="hackathon-sub-title">Hyderabad Hackathon</h4>
+        <p class="hackathon-sub-meta">Hack With India • Certificate of Participation</p>
+        <p class="hackathon-sub-desc">Collaborative engineering challenge focusing on rapid prototyping, real-world problem solving, and architecture design.</p>
+        <a href="CERTIFICATES/Hackathons/Jogu Kusuma Manjari_Certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-full">
+          View PDF
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Vynedam Talent Hunt 2K26 -->
+      <div class="hackathon-sub-card reveal" style="transition-delay: 0.15s;">
+        <div class="hackathon-sub-header">
+          <div class="hackathon-sub-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <span class="hackathon-status-tag">Participation</span>
+        </div>
+        <h4 class="hackathon-sub-title">Vynedam Talent Hunt 2K26</h4>
+        <p class="hackathon-sub-meta">Devnovate • 36-Hour National Hackathon</p>
+        <p class="hackathon-sub-desc">Competitive technical event testing algorithmic problem solving, computational complexity, and data structures.</p>
+        <a href="CERTIFICATES/Hackathons/Jogu Kusuma Manjari_Certificate (1).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-full">
+          View PDF
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Supplementary Career Milestones -->
+    <div class="milestones-row reveal">
+      <div class="milestone-pill-card">
+        <div class="milestone-pill-dot"></div>
+        <div class="milestone-pill-content">
+          <div class="milestone-pill-header">
+            <div class="milestone-pill-title">Infosys Springboard Internship</div>
+            <span class="milestone-status-tag"><span class="status-pulse-dot"></span>Currently Pursuing</span>
+          </div>
+          <div class="milestone-pill-sub">Selected for the Infosys Springboard Internship program.</div>
+        </div>
+      </div>
+      <div class="milestone-pill-card">
+        <div class="milestone-pill-dot"></div>
+        <div class="milestone-pill-content">
+          <div class="milestone-pill-title">LeetCode 50 Days Badge</div>
+          <div class="milestone-pill-sub">Awarded for consistent problem solving in data structures and algorithmic challenges.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section (Grouped by Organization) -->
+  <section id="certifications">
+    <div class="section-header reveal">
+      <span class="section-label">05 // Professional Accreditations</span>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+
+    <div class="org-certs-grid">
+      <!-- 1. Cisco Networking Academy -->
+      <div class="org-cert-card reveal">
+        <div class="org-cert-top">
+          <div class="org-cert-icon cisco-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+          </div>
+          <span class="org-cert-count">5 Certificates</span>
+        </div>
+        <div class="org-cert-body">
+          <h3 class="org-cert-title">Cisco Networking Academy</h3>
+          <p class="org-cert-subtitle">Networking & Packet Tracer Labs</p>
+          <p class="org-cert-desc">
+            Accredited credentials across CCNA core networking, routing & switching protocols, enterprise automation, and Packet Tracer network simulation.
+          </p>
+          <ul class="org-cert-highlights">
+            <li>CCNA: Introduction to Networks</li>
+            <li>CCNA: Switching, Routing, & Wireless Essentials</li>
+            <li>CCNA: Enterprise Networking, Security, & Automation</li>
+            <li>Exploring & Getting Started with Packet Tracer</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary btn-full org-cert-action" onclick="openCertGroup('cisco')">
+          <span>View Certificates →</span>
+        </button>
+      </div>
+
+      <!-- 2. Google / Cloud -->
+      <div class="org-cert-card reveal" style="transition-delay: 0.05s;">
+        <div class="org-cert-top">
+          <div class="org-cert-icon google-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+            </svg>
+          </div>
+          <span class="org-cert-count">2 Certificates</span>
+        </div>
+        <div class="org-cert-body">
+          <h3 class="org-cert-title">Google / Cloud</h3>
+          <p class="org-cert-subtitle">Cloud Engineering & Generative AI</p>
+          <p class="org-cert-desc">
+            Official Google Cloud accreditations validating associate cloud engineering capabilities and generative AI leadership.
+          </p>
+          <ul class="org-cert-highlights">
+            <li>Google Cloud Certified Associate Cloud Engineer</li>
+            <li>Google Cloud Certified Generative AI Leader</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary btn-full org-cert-action" onclick="openCertGroup('google')">
+          <span>View Certificates →</span>
+        </button>
+      </div>
+
+      <!-- 3. Infosys Springboard -->
+      <div class="org-cert-card reveal" style="transition-delay: 0.1s;">
+        <div class="org-cert-top">
+          <div class="org-cert-icon infosys-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <span class="org-cert-count">11 Certificates</span>
+        </div>
+        <div class="org-cert-body">
+          <h3 class="org-cert-title">Infosys Springboard</h3>
+          <p class="org-cert-subtitle">Java, Cloud Computing & Generative AI</p>
+          <p class="org-cert-desc">
+            Specialized accreditations covering Java Foundations, Cloud Infrastructure, Generative AI techniques, and Database Management Systems.
+          </p>
+          <ul class="org-cert-highlights">
+            <li>Java Foundation & Programming using Java</li>
+            <li>Essentials & Intro to Cloud Computing</li>
+            <li>Generative AI Foundations & IT Integration</li>
+            <li>DBMS Part 1, Part 2 & NoSQL Databases</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary btn-full org-cert-action" onclick="openCertGroup('infosys')">
+          <span>View Certificates →</span>
+        </button>
+      </div>
+
+      <!-- 4. Oracle -->
+      <div class="org-cert-card reveal" style="transition-delay: 0.15s;">
+        <div class="org-cert-top">
+          <div class="org-cert-icon oracle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m4.93 4.93 4.24 4.24"></path>
+              <path d="m14.83 9.17 4.24-4.24"></path>
+              <path d="m14.83 14.83 4.24 4.24"></path>
+              <path d="m9.17 14.83-4.24 4.24"></path>
+            </svg>
+          </div>
+          <span class="org-cert-count">1 Certification</span>
+        </div>
+        <div class="org-cert-body">
+          <h3 class="org-cert-title">Oracle</h3>
+          <p class="org-cert-subtitle">Oracle Certified Foundations Associate</p>
+          <p class="org-cert-desc">
+            <strong>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</strong><br>
+            Recognized by Oracle Corporation validating core AI, ML concepts, and OCI intelligent architecture.
+          </p>
+          <ul class="org-cert-highlights">
+            <li>OCI AI Services & Machine Learning Foundations</li>
+            <li>Official Oracle University Recognition</li>
+          </ul>
+        </div>
+        <a href="CERTIFICATES/eCertificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full org-cert-action">
+          <span>View PDF</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+
+      <!-- 5. TATA -->
+      <div class="org-cert-card reveal" style="transition-delay: 0.2s;">
+        <div class="org-cert-top">
+          <div class="org-cert-icon tata-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <span class="org-cert-count">1 Certificate</span>
+        </div>
+        <div class="org-cert-body">
+          <h3 class="org-cert-title">TATA</h3>
+          <p class="org-cert-subtitle">TATA (Forage) Job Simulation</p>
+          <p class="org-cert-desc">
+            <strong>GenAI Powered Data Analytics Job Simulation</strong><br>
+            Completed practical tasks in exploratory data analysis, AI delinquency modeling, and executive collections storytelling.
+          </p>
+          <ul class="org-cert-highlights">
+            <li>Exploratory Data Analysis & Risk Profiling</li>
+            <li>Predicting Delinquency with AI & Strategy</li>
+          </ul>
+        </div>
+        <a href="CERTIFICATES/TATA.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full org-cert-action">
+          <span>View PDF</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+
+      <!-- 6. CipherSchools -->
+      <div class="org-cert-card reveal" style="transition-delay: 0.25s;">
+        <div class="org-cert-top">
+          <div class="org-cert-icon webinar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <span class="org-cert-count">1 Certificate</span>
+        </div>
+        <div class="org-cert-body">
+          <h3 class="org-cert-title">CipherSchools</h3>
+          <p class="org-cert-subtitle">Cloud Computing Masterclass</p>
+          <p class="org-cert-desc">
+            <strong>Fundamentals of Cloud Computing</strong><br>
+            Masterclass covering distributed systems, scalable cloud native architecture, virtualization, and high availability.
+          </p>
+          <ul class="org-cert-highlights">
+            <li>Cloud Architecture & Distributed Scalability</li>
+            <li>Certificate ID: CSW2026-18407</li>
+          </ul>
+        </div>
+        <a href="CERTIFICATES/WB_jogukusuma@gmail.com_CSW2026-18407.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full org-cert-action">
+          <span>View PDF</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NSS & Community Activities Section -->
+  <section id="nss">
+    <div class="section-header reveal">
+      <span class="section-label">06 // Leadership & Social Impact</span>
+      <h2 class="section-title">NSS & Community Activities</h2>
+      <p class="section-desc">
+        Beyond academics, I actively participate in NSS and community activities, contributing through teamwork, volunteering, awareness initiatives, and social service.
+      </p>
+    </div>
+
+    <!-- NSS Volunteer Profile Highlight Card -->
+    <div class="nss-highlight-card reveal">
+      <div class="nss-highlight-top">
+        <div class="nss-highlight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="nss-highlight-badge">Leadership & Service</div>
+      </div>
+      <div class="nss-highlight-body">
+        <h3 class="nss-highlight-title">NSS Volunteer</h3>
+        <p class="nss-highlight-text">
+          Contributing through community service, student engagement, cleanliness initiatives, and social responsibility.
+        </p>
+      </div>
+    </div>
+
+    <!-- 6-Photo Responsive NSS Gallery (Photo-First Visual Presentation) -->
+    <div class="nss-gallery-grid">
+      <!-- Photo 1 -->
+      <div class="nss-photo-card reveal" onclick="openNssLightboxIndex(0)">
+        <div class="nss-photo-wrap">
+          <img src="NSS/20241030_123042.jpg" alt="Cleanliness Drive" class="nss-photo-img" loading="lazy" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='CERTIFICATES/NSS/20241030_123042.jpg';}">
+          <div class="nss-photo-overlay">
+            <div class="nss-photo-overlay-content">
+              <h3 class="nss-photo-title">Cleanliness Drive</h3>
+              <span class="nss-photo-action">
+                <span>View Activity</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="nss-mobile-caption">
+          <h3 class="nss-mobile-title">Cleanliness Drive</h3>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="nss-photo-card reveal" style="transition-delay: 0.05s;" onclick="openNssLightboxIndex(1)">
+        <div class="nss-photo-wrap">
+          <img src="NSS/IMG_20260723_213233.jpg" alt="Independence Day Rally" class="nss-photo-img" loading="lazy" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='CERTIFICATES/NSS/IMG_20260723_213233.jpg';}">
+          <div class="nss-photo-overlay">
+            <div class="nss-photo-overlay-content">
+              <h3 class="nss-photo-title">Independence Day Rally</h3>
+              <span class="nss-photo-action">
+                <span>View Activity</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="nss-mobile-caption">
+          <h3 class="nss-mobile-title">Independence Day Rally</h3>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="nss-photo-card reveal" style="transition-delay: 0.1s;" onclick="openNssLightboxIndex(2)">
+        <div class="nss-photo-wrap">
+          <img src="NSS/IMG_20260723_213248.jpg" alt="Independence Day Parade" class="nss-photo-img" loading="lazy" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='CERTIFICATES/NSS/IMG_20260723_213248.jpg';}">
+          <div class="nss-photo-overlay">
+            <div class="nss-photo-overlay-content">
+              <h3 class="nss-photo-title">Independence Day Parade</h3>
+              <span class="nss-photo-action">
+                <span>View Activity</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="nss-mobile-caption">
+          <h3 class="nss-mobile-title">Independence Day Parade</h3>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="nss-photo-card reveal" style="transition-delay: 0.15s;" onclick="openNssLightboxIndex(3)">
+        <div class="nss-photo-wrap">
+          <img src="NSS/IMG_20260820_181634.jpg" alt="NSS Orientation Day" class="nss-photo-img" loading="lazy" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='CERTIFICATES/NSS/IMG_20260820_181634.jpg';}">
+          <div class="nss-photo-overlay">
+            <div class="nss-photo-overlay-content">
+              <h3 class="nss-photo-title">NSS Orientation Day</h3>
+              <span class="nss-photo-action">
+                <span>View Activity</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="nss-mobile-caption">
+          <h3 class="nss-mobile-title">NSS Orientation Day</h3>
+        </div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="nss-photo-card reveal" style="transition-delay: 0.2s;" onclick="openNssLightboxIndex(4)">
+        <div class="nss-photo-wrap">
+          <img src="NSS/IMG_20260820_181700.jpg" alt="Orphanage Visit" class="nss-photo-img" loading="lazy" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='CERTIFICATES/NSS/IMG_20260820_181700.jpg';}">
+          <div class="nss-photo-overlay">
+            <div class="nss-photo-overlay-content">
+              <h3 class="nss-photo-title">Orphanage Visit</h3>
+              <span class="nss-photo-action">
+                <span>View Activity</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="nss-mobile-caption">
+          <h3 class="nss-mobile-title">Orphanage Visit</h3>
+        </div>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="nss-photo-card reveal" style="transition-delay: 0.25s;" onclick="openNssLightboxIndex(5)">
+        <div class="nss-photo-wrap">
+          <img src="NSS/IMG-20241104-WA0041.jpg" alt="Swachh Bharat Abhiyan" class="nss-photo-img" loading="lazy" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='CERTIFICATES/NSS/IMG-20241104-WA0041.jpg';}">
+          <div class="nss-photo-overlay">
+            <div class="nss-photo-overlay-content">
+              <h3 class="nss-photo-title">Swachh Bharat Abhiyan</h3>
+              <span class="nss-photo-action">
+                <span>View Activity</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="nss-mobile-caption">
+          <h3 class="nss-mobile-title">Swachh Bharat Abhiyan</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Preview Section -->
+  <section id="resume">
+    <div class="section-header reveal">
+      <span class="section-label">07 // Curriculum Vitae</span>
+      <h2 class="section-title">Resume & Credentials</h2>
+    </div>
+
+    <div class="resume-preview-container reveal">
+      <div class="resume-preview-card" id="resume-preview-card">
+        <!-- Interactive Toolbar -->
+        <div class="resume-toolbar">
+          <div class="resume-badge-group">
+            <span class="resume-badge-pill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Official CV • PDF
+            </span>
+            <span class="resume-status-dot"></span>
+            <span class="resume-updated-text">Updated 2026</span>
+          </div>
+
+          <div class="resume-actions-group">
+            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" id="btn-resume-open">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Open in New Tab
+            </a>
+
+            <a href="resume.pdf" download="Jogu_Kusuma_Manjari_Resume.pdf" class="btn btn-primary btn-sm" id="btn-resume-download">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download PDF
+            </a>
+
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-resume-fullscreen" title="Toggle Fullscreen Preview">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="fullscreen-icon">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
+              </svg>
+              <span>Fullscreen</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Embedded Interactive PDF Viewer -->
+        <div class="resume-frame-wrapper" id="resume-frame-wrapper">
+          <object data="resume.pdf#toolbar=1&navpanes=0&scrollbar=1" type="application/pdf" class="resume-pdf-frame" id="resume-pdf-object">
+            <iframe src="resume.pdf" class="resume-pdf-frame" id="resume-pdf-iframe" title="Jogu Kusuma Manjari Resume">
+              <div class="resume-fallback-card">
+                <p>Your browser does not support inline PDF viewing.</p>
+                <a href="resume.pdf" target="_blank" class="btn btn-primary">Open Resume PDF</a>
+              </div>
+            </iframe>
+          </object>
+        </div>
+      </div>
+
+      <!-- Quick Highlights Grid -->
+      <div class="resume-meta-grid">
+        <div class="resume-meta-card">
+          <div class="resume-meta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <div>
+            <h4>B.Tech in CSE (AI & ML)</h4>
+            <p>CMR Institute of Technology • CGPA: 8.25 • 2023–2027</p>
+          </div>
+        </div>
+
+        <div class="resume-meta-card">
+          <div class="resume-meta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h4>Key Accreditations</h4>
+            <p>Google Cloud • Cisco CCNA • Infosys Springboard • Oracle OCI</p>
+          </div>
+        </div>
+
+        <div class="resume-meta-card">
+          <div class="resume-meta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div>
+            <h4>Direct Contact</h4>
+            <p>jogukusuma08@gmail.com • +91 9391610727 • Hyderabad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Footer & Let's Connect recruiter actions -->
+  <footer class="footer-minimal" id="contact">
+    <div class="footer-minimal-container">
+      <div class="footer-action-box reveal">
+        <h2 class="footer-action-title">Let's Connect</h2>
+        <div class="footer-action-links">
+          <a href="mailto:jogukusuma08@gmail.com" class="btn btn-primary email-link">
+            Email Me
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+          <a href="resume.pdf" class="btn btn-secondary" target="_blank" download="Jogu_Kusuma_Manjari_Resume.pdf">
+            Download Resume
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Social lines -->
+      <ul class="footer-social-row reveal">
+        <li>
+          <a href="https://github.com/Jogukusuma" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+              </path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+            github.com/Jogukusuma
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jogu-kusuma-manjari-46995830b/" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            linkedin.com/in/jogu-kusuma-manjari
+          </a>
+        </li>
+        <li>
+          <a href="mailto:jogukusuma08@gmail.com" class="footer-social-link email-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            jogukusuma08@gmail.com
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer-copyright">
+        &copy; 2026 Jogu Kusuma Manjari. All rights reserved. Recruiter optimized.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Certificate Gallery Modal Dialog -->
+  <div id="cert-modal" class="cert-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+    <div class="cert-modal-overlay" id="cert-modal-overlay"></div>
+    <div class="cert-modal-dialog">
+      <div class="cert-modal-header">
+        <div class="cert-modal-title-wrap">
+          <span class="cert-modal-badge" id="cert-modal-badge">5 Certificates</span>
+          <h3 class="cert-modal-title" id="cert-modal-title">Cisco Networking Academy</h3>
+          <p class="cert-modal-subtitle" id="cert-modal-subtitle">Computer Networking & Simulation</p>
+        </div>
+        <button class="cert-modal-close-btn" id="cert-modal-close-btn" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="cert-modal-body" id="cert-modal-body">
+        <!-- Dynamically injected certificates gallery -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Local NSS Photo Lightbox Viewer with Full Controls -->
+  <div id="nss-lightbox" class="nss-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="nss-lightbox-overlay" id="nss-lightbox-overlay"></div>
+    <div class="nss-lightbox-wrapper">
+      <div class="nss-lightbox-header">
+        <div class="nss-lightbox-counter" id="nss-lightbox-counter">1 of 6</div>
+        <button class="nss-lightbox-close-btn" id="nss-lightbox-close-btn" aria-label="Close Lightbox" title="Close (Esc)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="nss-lightbox-stage">
+        <button class="nss-lightbox-nav-btn prev" id="nss-lightbox-prev-btn" aria-label="Previous Photo" title="Previous (Left Arrow)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="nss-lightbox-body">
+          <img id="nss-lightbox-img" src="" alt="NSS Activity Preview" class="nss-lightbox-img">
+        </div>
+        <button class="nss-lightbox-nav-btn next" id="nss-lightbox-next-btn" aria-label="Next Photo" title="Next (Right Arrow)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+      <div class="nss-lightbox-footer">
+        <h4 class="nss-lightbox-caption-title" id="nss-lightbox-caption-title"></h4>
+        <p class="nss-lightbox-caption-desc" id="nss-lightbox-caption-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
